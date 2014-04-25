@@ -402,7 +402,6 @@ static inline sa_hrtime_t osif_gethrtime()
     return (t.tv_sec * 1000000000) + (t.tv_usec * 1000);
 #endif
 }
-
 // ============================================================================================
 // Memory Pool
 // ============================================================================================
@@ -478,7 +477,6 @@ void memory_pool_release_memory()
 
 void memory_pool_garbage_collect_list(memory_block_list_t* list, sa_size_t block_size)
 {
-    
     sa_hrtime_t now = osif_gethrtime();
     int done = 0;
     
